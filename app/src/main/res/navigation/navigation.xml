@@ -9,7 +9,11 @@
         android:id="@+id/mainFragment"
         android:name="com.github.ods.umnozhka.StartFragment"
         android:label="main_fragment"
-        tools:layout="@layout/start_fragment" />
+        tools:layout="@layout/start_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.github.ods.umnozhka.GameFragment"
