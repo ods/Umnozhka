@@ -9,5 +9,5 @@
         android:id="@+id/mainFragment"
         android:name="com.github.ods.umnozhka.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/start_fragment" />
 </navigation>
