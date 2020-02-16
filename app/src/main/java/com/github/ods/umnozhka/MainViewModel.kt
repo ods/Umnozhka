@@ -1,4 +1,4 @@
-package com.github.ods.umnozhka.ui.main
+package com.github.ods.umnozhka
 
 import androidx.lifecycle.ViewModel
 
