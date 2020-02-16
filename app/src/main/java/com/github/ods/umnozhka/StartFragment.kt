@@ -1,27 +1,38 @@
 package com.github.ods.umnozhka
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.github.ods.umnozhka.databinding.StartFragmentBinding
+
 
 class StartFragment : Fragment() {
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: StartViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.start_fragment, container, false)
-    }
+        val binding = DataBindingUtil.inflate<StartFragmentBinding>(
+            inflater, R.layout.start_fragment, container, false
+        )
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+        viewModel = ViewModelProvider(this).get(StartViewModel::class.java)
+        binding.viewModel = viewModel
+
+        viewModel.startPressed.observe(viewLifecycleOwner, Observer {
+            findNavController().navigate(
+                StartFragmentDirections.actionStartFragmentToGameFragment())
+        })
+
+        return binding.root
     }
 
 }
