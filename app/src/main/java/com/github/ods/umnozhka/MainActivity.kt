@@ -2,7 +2,7 @@ package com.github.ods.umnozhka
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.ods.umnozhka.ui.main.MainFragment
+//import com.github.ods.umnozhka.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
