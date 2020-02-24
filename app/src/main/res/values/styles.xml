@@ -18,7 +18,8 @@
     </style>
 
     <style name="NumPadButton" parent="Widget.MaterialComponents.Button">
-        <item name="android:textSize">@dimen/num_pad_button_text_size</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">48sp</item>
         <item name="android:layout_marginRight">@dimen/num_pad_button_margin</item>
         <item name="android:layout_marginLeft">@dimen/num_pad_button_margin</item>
         <item name="android:layout_columnWeight">1</item>

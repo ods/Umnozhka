@@ -47,43 +47,43 @@
             android:orientation="horizontal"
             android:padding="16dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="1" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="2" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="3" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="4" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="5" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="6" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="7" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="8" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="9" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
                 android:text="0" />
         </GridLayout>
