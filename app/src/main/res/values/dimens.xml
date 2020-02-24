@@ -2,4 +2,7 @@
 <resources>
     <dimen name="big_button_text_size">48sp</dimen>
     <dimen name="big_button_padding">32dp</dimen>
+    <dimen name="num_pad_button_text_size">48sp</dimen>
+    <dimen name="num_pad_button_padding">4dp</dimen>
+    <dimen name="num_pad_button_margin">4dp</dimen>
 </resources>

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 
 
 class StartViewModel : ViewModel() {
-    val startPressed = SingleLiveEvent<Unit>()
+    val startPressed = SingleLiveEvent<Nothing>()
 
     fun onStartClicked() {
         startPressed.value = null
