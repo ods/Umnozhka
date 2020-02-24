@@ -49,42 +49,52 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(1)}"
                 android:text="1" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(2)}"
                 android:text="2" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(3)}"
                 android:text="3" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(4)}"
                 android:text="4" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(5)}"
                 android:text="5" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(6)}"
                 android:text="6" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(7)}"
                 android:text="7" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(8)}"
                 android:text="8" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(9)}"
                 android:text="9" />
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"
+                android:onClick="@{() -> viewModel.onNumClicked(0)}"
                 android:text="0" />
         </GridLayout>
     </LinearLayout>
