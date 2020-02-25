@@ -23,6 +23,7 @@ class StartFragment : Fragment() {
         val binding = DataBindingUtil.inflate<StartFragmentBinding>(
             inflater, R.layout.start_fragment, container, false
         )
+        binding.lifecycleOwner = this
 
         viewModel = ViewModelProvider(this).get(StartViewModel::class.java)
         binding.viewModel = viewModel
