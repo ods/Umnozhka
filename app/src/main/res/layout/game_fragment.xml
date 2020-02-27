@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -37,13 +38,13 @@
                 tools:text="98 × 76 = ____" />
         </RelativeLayout>
 
-        <GridLayout
+        <androidx.gridlayout.widget.GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
             android:layout_weight="2"
-            android:columnCount="@integer/num_pad_column_count"
-            android:orientation="horizontal"
+            app:columnCount="@integer/num_pad_column_count"
+            app:orientation="horizontal"
             android:padding="16dp">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -95,6 +96,6 @@
                 style="@style/NumPadButton"
                 android:onClick="@{() -> viewModel.onNumClicked(0)}"
                 android:text="0" />
-        </GridLayout>
+        </androidx.gridlayout.widget.GridLayout>
     </LinearLayout>
 </layout>

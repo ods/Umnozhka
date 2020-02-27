@@ -22,8 +22,8 @@
         <item name="autoSizeMaxTextSize">48sp</item>
         <item name="android:layout_marginRight">@dimen/num_pad_button_margin</item>
         <item name="android:layout_marginLeft">@dimen/num_pad_button_margin</item>
-        <item name="android:layout_columnWeight">1</item>
-        <item name="android:layout_rowWeight">1</item>
+        <item name="layout_columnWeight">1</item>
+        <item name="layout_rowWeight">1</item>
     </style>
 
 </resources>
