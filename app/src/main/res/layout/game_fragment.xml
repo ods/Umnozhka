@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -25,15 +25,31 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/exerciseView"
+                android:id="@+id/scoreView"
+                style="@style/ScoreText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.exerciseText}"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{viewModel.score.toString()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="0" />
+
+            <TextView
+                android:id="@+id/exerciseView"
                 style="@style/ExerciseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@{viewModel.exerciseText}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scoreView"
                 tools:text="98 × 76 = ____" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -42,9 +58,9 @@
             android:layout_height="0dp"
             android:layout_gravity="center"
             android:layout_weight="2"
+            android:padding="16dp"
             app:columnCount="@integer/num_pad_column_count"
-            app:orientation="horizontal"
-            android:padding="16dp">
+            app:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/NumPadButton"

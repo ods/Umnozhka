@@ -1,5 +1,6 @@
 package com.github.ods.umnozhka
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -27,6 +28,12 @@ class GameFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
         binding.viewModel = viewModel
+
+        viewModel.state.observe(viewLifecycleOwner, Observer {
+            if (it != GameState.WAIT) {
+                viewModel.newExercise()
+            }
+        })
 
         return binding.root
     }
