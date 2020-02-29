@@ -1,8 +1,7 @@
 package com.github.ods.umnozhka
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -31,7 +30,9 @@ class GameFragment : Fragment() {
 
         viewModel.state.observe(viewLifecycleOwner, Observer {
             if (it != GameState.WAIT) {
-                viewModel.newExercise()
+                Handler().postDelayed({
+                    viewModel.newExercise()
+                }, 500)
             }
         })
 
