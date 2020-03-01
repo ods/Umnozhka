@@ -38,7 +38,7 @@ class GameFragment : Fragment() {
                 }
                 Handler().postDelayed({
                     viewModel.newExercise()
-                }, 500)
+                }, 300)
             }
         })
 

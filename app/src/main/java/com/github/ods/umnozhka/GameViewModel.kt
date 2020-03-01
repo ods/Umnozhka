@@ -28,6 +28,8 @@ class GameViewModel : ViewModel() {
     val score: LiveData<Int>
         get() = _score
 
+    val scoreIncrement = SingleLiveEvent<Int>()
+
     fun newExercise() {
         _state.value = GameState.WAIT
         number1 = Random.nextInt(2, 9)
@@ -46,6 +48,11 @@ class GameViewModel : ViewModel() {
         _exerciseText.value = "$number1 × $number2 = $answer"
     }
 
+    private fun addScore(inc: Int) {
+        _score.value = (_score.value ?: 0) + inc
+        scoreIncrement.value = inc
+    }
+
     fun onNumClicked(num: Int) {
         if (_state.value == GameState.WAIT) {
             val newAnswer = userAnswer + num.toString()
@@ -56,7 +63,7 @@ class GameViewModel : ViewModel() {
                 updateExerciseText()
                 if (userAnswer == correctAnswer) {
                     _state.value = GameState.WIN
-                    _score.value = (_score.value ?: 0) + 1
+                    addScore(1)
                 }
             }
         }
