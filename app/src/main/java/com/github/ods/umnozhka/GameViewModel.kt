@@ -42,7 +42,7 @@ class GameViewModel : ViewModel() {
     }
 
     private fun updateExerciseText() {
-        val answer = userAnswer.padEnd(correctAnswer.length, '_')
+        val answer = userAnswer.padEnd(correctAnswer.length, '\u00A0')
         _exerciseText.value = "$number1 × $number2 = $answer"
     }
 
