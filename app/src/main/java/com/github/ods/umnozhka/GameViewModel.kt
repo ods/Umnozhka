@@ -48,13 +48,16 @@ class GameViewModel : ViewModel() {
 
     fun onNumClicked(num: Int) {
         if (_state.value == GameState.WAIT) {
-            userAnswer += num.toString()
-            updateExerciseText()
-            if (userAnswer == correctAnswer) {
-                _state.value = GameState.WIN
-                _score.value = (_score.value ?: 0) + 1
-            } else if (!correctAnswer.startsWith(userAnswer)) {
+            val newAnswer = userAnswer + num.toString()
+            if (!correctAnswer.startsWith(newAnswer)) {
                 _state.value = GameState.LOSS
+            } else {
+                userAnswer = newAnswer
+                updateExerciseText()
+                if (userAnswer == correctAnswer) {
+                    _state.value = GameState.WIN
+                    _score.value = (_score.value ?: 0) + 1
+                }
             }
         }
     }
